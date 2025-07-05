@@ -114,6 +114,10 @@
             Send Data Event
         </button>
         
+        <button class="button" onclick="navigateToHome()" style="background: #ff9500;">
+            Navigate to Home
+        </button>
+        
         <div id="status" class="status"></div>
     </div>
 
@@ -181,6 +185,16 @@
                         notifications: true
                     }
                 },
+                timestamp: new Date().toISOString()
+            });
+        }
+        
+        function navigateToHome() {
+            sendToReactNative({
+                type: 'navigate_to_home',
+                message: 'User requested navigation to home screen',
+                action: 'navigate',
+                destination: 'home',
                 timestamp: new Date().toISOString()
             });
         }

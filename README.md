@@ -61,6 +61,10 @@ import { WebView } from 'react-native-webview';
       case 'page_ready':
         console.log('Page ready:', data.message);
         break;
+      case 'navigate_to_home':
+        console.log('Navigate to home:', data.message);
+        // Handle navigation to home screen
+        break;
     }
   }}
   javaScriptEnabled={true}
